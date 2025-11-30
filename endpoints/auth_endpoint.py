@@ -1,5 +1,5 @@
 import requests
-from data import data_test
+from data import test_data
 
 
 
@@ -8,7 +8,7 @@ class AuthEndpoint:
 
 
     def get_auth_token(self, login, password):
-        url = f'{data_test.url}/common/auth'
+        url = f'{test_data.url}/common/auth'
         payload = {'login': login, 'password': password}
         response = requests.post(url, json=payload)
         response.raise_for_status() # Проверка, что ответ успешен
