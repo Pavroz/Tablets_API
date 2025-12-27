@@ -92,7 +92,7 @@ class ProfileEndpoint(AuthEndpoint):
         response = requests.post(url, params=params, headers=headers)
         assert response.status_code == 204
 
-    def deactivate_profile(self, id_for_deactivate):
+    def deactivate_profile(self):
         """Деактивация профиля"""
         token = self.get_auth_token()
         url = f'{test_data.url}/profiles/active'
